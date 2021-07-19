@@ -1,0 +1,26 @@
+{
+  "name": "simple-node-cluster",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "loadtest": "loadtest -n 10000 -c 100 --rps 200 http://localhost:3000?number=20",
+    "artillery": "artillery quick --count 10 -n 20 http://localhost:3000?number=20"
+  },
+  "repository": "git@github.com:tuandungbrse/simple-node-cluster.git",
+  "author": "DungTNT <tuandungbrse@gmail.com>",
+  "license": "MIT",
+  "volta": {
+    "node": "14.17.3",
+    "yarn": "1.22.10"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "artillery": "^1.7.6",
+    "loadtest": "^5.1.2",
+    "nodemon": "^2.0.12"
+  }
+}
